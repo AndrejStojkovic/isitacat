@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is it a cat?</title>
+    <link rel="stylesheet" type="text/css" href="public/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e2deaac5f0.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="title">
+                <h1>Is It a Cat?</h1>
+            </div>   
+
+            <div class="upload">
+                <span class="upload-text">Upload image:</span> <br>
+                <input type="file" id="input-img" name="input-img" accept=".png, .jpg, .jpeg, .svg .gif"> <br>
+                <span class="small-text">(Currently supported: png, jpg, jpeg, svg and gif)</span> <br>
+            </div>
+
+            <div class="image-preview" id="imagePreview">
+                <img src="" alt="Image Preview" id="imgd" class="image-preview__img">
+                <span class="image-preview__default-text">Image Preview</span>
+            </div>
+
+            <span id="waitAnim" style="color: #ccc; font-size: 92px;"><i class="rotate fas fa-spinner"></i></span>
+            <span id="answerNo" style="color: red; font-size: 128px;"><i class="fas fa-times"></i></span>
+            <span id="answerYes" style="color: green; font-size: 128px;"><i class="fas fa-check"></i></span>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="public/main.js"></script>
+    <script type="text/javascript" src="public/kitty.js"></script>
+</body>
+</html>
